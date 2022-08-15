@@ -6,18 +6,18 @@
 import java.util.Objects;
 
 public class Book {
-    private final String bookName;
+    private final String bookTitle;
     private final Author author;
     private int year;
 
-    public Book(String bookName, Author author, int year) {
-        this.bookName = bookName;
+    public Book(String bookTitle, Author author, int year) {
+        this.bookTitle = bookTitle;
         this.author = author;
         this.year = year;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getBookTitle() {
+        return bookTitle;
     }
 
     public Author getAuthor() {
@@ -37,21 +37,19 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return year == book.year && bookName.equals(book.bookName) && author.equals(book.author);
+        return year == book.year && bookTitle.equals(book.bookTitle) && author.equals(book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bookName, author, year);
+        return Objects.hash(bookTitle, author, year);
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "bookName='" + bookName + '\'' +
-                ", author=" + author +
-                ", year=" + year +
-                '}';
+        return "bookTitle: " + bookTitle +
+                ", author: " + author +
+                ", year= " + year + ".";
     }
 }
 

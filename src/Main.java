@@ -11,10 +11,13 @@ public class Main {
         Book firstBook = new Book("Head First Java", firstAuthor, 2012);
         Book secondBook = new Book("Thinking in Java", secondAuthor, 2015);
 
-        System.out.println("Author : " + firstAuthor.getFullName() + " book: " + firstBook.getBookName() + " " +
-                firstBook.getYear() + " year.");
-        System.out.println("Author : " + secondAuthor.getFullName() + " book: " + secondBook.getBookName() + " " +
-                secondBook.getYear() + " year.");
+        System.out.println(firstBook);
+        System.out.println(secondBook);
+
+        System.out.println(firstBook.equals(secondBook));
+        System.out.println(firstBook.hashCode() == secondBook.hashCode());
+        System.out.println("firstBook hashCode: " + firstBook.hashCode());
+        System.out.println("secondBook hashCode:" + secondBook.hashCode());
     }
 
 }
